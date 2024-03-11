@@ -17,6 +17,8 @@ public class WhenWorkingWithWholeNumbers {
        
         int timeJump = 30;
         targetYear = initialYear + timeJump;
+
+        System.out.println(targetYear);
         
         assertThat(targetYear, equalTo(2015));
     }
