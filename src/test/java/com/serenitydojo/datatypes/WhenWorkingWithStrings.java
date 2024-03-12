@@ -11,19 +11,22 @@ public class WhenWorkingWithStrings {
     public void convertToLowerCase() {
         String bookTitle = "The Cat In The Hat";
 
-        String lowerCaseTitle = "";
         // TODO: Convert the book title to lower case and assign it to the lowerCaseTitle variable
 
-        assertThat(lowerCaseTitle, equalTo("the cat in the hat"));
+        String lowerCaseTitle = bookTitle.toLowerCase();
+        System.out.println(lowerCaseTitle);
 
+        assertThat(lowerCaseTitle, equalTo("the cat in the hat"));
     }
 
     @Test
     public void convertToUpperCase() {
         String bookTitle = "The Cat In The Hat";
 
-        String upperCaseTitle = "";
         // TODO: Convert the book title to upper case and assign it to the lowerCaseTitle variable
+
+        String upperCaseTitle = bookTitle.toUpperCase();
+        System.out.println(upperCaseTitle);
 
         assertThat(upperCaseTitle, equalTo("THE CAT IN THE HAT"));
     }
@@ -32,8 +35,10 @@ public class WhenWorkingWithStrings {
     public void trimExtraSpaces() {
         String bookTitle = "  The Cat In The Hat    ";
 
-        String trimmedTitle = "";
         // TODO: Trim the spaces before and after the title text
+
+        String trimmedTitle = bookTitle.trim();
+        System.out.println(trimmedTitle);
 
         assertThat(trimmedTitle, equalTo("The Cat In The Hat"));
     }
@@ -43,7 +48,11 @@ public class WhenWorkingWithStrings {
         String bookTitle = "The Cat In The Hat";
 
         int length = 0;
+
         // TODO: Find the number of characters in the string
+
+        length = bookTitle.length();
+       System.out.println(length);
 
         assertThat(length, equalTo(18));
     }
@@ -52,8 +61,10 @@ public class WhenWorkingWithStrings {
     public void replacingAText() {
         String bookTitle = "The Cat In The Hat";
 
-        String updatedTitle = "";
         // TODO: Replace the word "Cat" with "Dog
+
+        String updatedTitle = bookTitle.replace("Cat","Dog");
+        System.out.println(updatedTitle);
 
         assertThat(updatedTitle, equalTo("The Dog In The Hat"));
     }
